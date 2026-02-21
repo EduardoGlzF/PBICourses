@@ -1,0 +1,96 @@
+SaleID,SaleDate,FoodCategory,Item,Quantity,UnitPrice,TotalSales,SalesPoint
+1001,2025-01-02,Fast Food,Burger,3,5.50,16.50,Downtown
+1002,2025-01-04,Beverage,Coffee,2,3.00,6.00,Campus
+1003,2025-01-06,Bakery,Croissant,5,2.20,11.00,Mall
+1004,2025-01-08,Dessert,Donut,6,1.80,10.80,Downtown
+1005,2025-01-10,Healthy,Salad,2,6.50,13.00,Airport
+1006,2025-01-12,Fast Food,Pizza,1,8.00,8.00,Mall
+1007,2025-01-14,Beverage,Tea,4,2.50,10.00,Campus
+1008,2025-01-16,Bakery,Muffin,3,2.00,6.00,Food Truck
+1009,2025-01-18,Dessert,Cake,1,12.00,12.00,Downtown
+1010,2025-01-20,Healthy,Fruit Bowl,2,5.00,10.00,Airport
+1011,2025-01-22,Fast Food,Hot Dog,5,3.50,17.50,Food Truck
+1012,2025-01-24,Beverage,Smoothie,3,4.50,13.50,Mall
+1013,2025-01-26,Bakery,Bread,4,2.80,11.20,Downtown
+1014,2025-01-28,Dessert,Ice Cream,2,4.00,8.00,Campus
+1015,2025-01-30,Healthy,Wrap,3,6.00,18.00,Mall
+1016,2025-02-02,Fast Food,Burger,4,5.50,22.00,Downtown
+1017,2025-02-04,Beverage,Coffee,6,3.00,18.00,Airport
+1018,2025-02-06,Bakery,Croissant,2,2.20,4.40,Campus
+1019,2025-02-08,Dessert,Donut,8,1.80,14.40,Food Truck
+1020,2025-02-10,Healthy,Salad,1,6.50,6.50,Mall
+1021,2025-03-01,Fast Food,Pizza,2,8.00,16.00,Downtown
+1022,2025-03-03,Beverage,Tea,5,2.50,12.50,Campus
+1023,2025-03-05,Bakery,Muffin,4,2.00,8.00,Mall
+1024,2025-03-07,Dessert,Cake,2,12.00,24.00,Airport
+1025,2025-03-09,Healthy,Fruit Bowl,3,5.00,15.00,Food Truck
+1026,2025-04-01,Fast Food,Hot Dog,6,3.50,21.00,Downtown
+1027,2025-04-03,Beverage,Smoothie,4,4.50,18.00,Mall
+1028,2025-04-05,Bakery,Bread,5,2.80,14.00,Campus
+1029,2025-04-07,Dessert,Ice Cream,3,4.00,12.00,Downtown
+1030,2025-04-09,Healthy,Wrap,2,6.00,12.00,Airport
+1031,2025-04-11,Fast Food,Burger,5,5.50,27.50,Food Truck
+1032,2025-04-13,Beverage,Coffee,3,3.00,9.00,Campus
+1033,2025-04-15,Bakery,Croissant,6,2.20,13.20,Mall
+1034,2025-04-17,Dessert,Donut,10,1.80,18.00,Downtown
+1035,2025-04-19,Healthy,Salad,4,6.50,26.00,Airport
+1036,2025-04-21,Fast Food,Pizza,3,8.00,24.00,Mall
+1037,2025-04-23,Beverage,Tea,7,2.50,17.50,Campus
+1038,2025-04-25,Bakery,Muffin,5,2.00,10.00,Food Truck
+1039,2025-04-27,Dessert,Cake,2,12.00,24.00,Downtown
+1040,2025-04-29,Healthy,Fruit Bowl,4,5.00,20.00,Airport
+1041,2025-05-02,Fast Food,Hot Dog,8,3.50,28.00,Food Truck
+1042,2025-05-04,Beverage,Smoothie,5,4.50,22.50,Mall
+1043,2025-05-06,Bakery,Bread,6,2.80,16.80,Campus
+1044,2025-05-08,Dessert,Ice Cream,4,4.00,16.00,Downtown
+1045,2025-05-10,Healthy,Wrap,5,6.00,30.00,Airport
+1046,2025-05-12,Fast Food,Burger,6,5.50,33.00,Mall
+1047,2025-05-14,Beverage,Coffee,8,3.00,24.00,Campus
+1048,2025-05-16,Bakery,Croissant,7,2.20,15.40,Downtown
+1049,2025-05-18,Dessert,Donut,12,1.80,21.60,Food Truck
+1050,2025-05-20,Healthy,Salad,3,6.50,19.50,Airport
+1051,2025-06-02,Fast Food,Pizza,4,8.00,32.00,Mall
+1052,2025-06-04,Beverage,Tea,6,2.50,15.00,Campus
+1053,2025-06-06,Bakery,Muffin,8,2.00,16.00,Food Truck
+1054,2025-06-08,Dessert,Cake,3,12.00,36.00,Downtown
+1055,2025-06-10,Healthy,Fruit Bowl,5,5.00,25.00,Airport
+1056,2025-06-12,Fast Food,Hot Dog,9,3.50,31.50,Mall
+1057,2025-06-14,Beverage,Smoothie,6,4.50,27.00,Campus
+1058,2025-06-16,Bakery,Bread,7,2.80,19.60,Downtown
+1059,2025-06-18,Dessert,Ice Cream,6,4.00,24.00,Food Truck
+1060,2025-06-20,Healthy,Wrap,4,6.00,24.00,Airport
+1061,2025-07-02,Fast Food,Burger,7,5.50,38.50,Mall
+1062,2025-07-04,Beverage,Coffee,9,3.00,27.00,Campus
+1063,2025-07-06,Bakery,Croissant,8,2.20,17.60,Downtown
+1064,2025-07-08,Dessert,Donut,15,1.80,27.00,Food Truck
+1065,2025-07-10,Healthy,Salad,5,6.50,32.50,Airport
+1066,2025-07-12,Fast Food,Pizza,5,8.00,40.00,Downtown
+1067,2025-07-14,Beverage,Tea,8,2.50,20.00,Campus
+1068,2025-07-16,Bakery,Muffin,9,2.00,18.00,Food Truck
+1069,2025-07-18,Dessert,Cake,4,12.00,48.00,Mall
+1070,2025-07-20,Healthy,Fruit Bowl,6,5.00,30.00,Airport
+1071,2025-07-22,Fast Food,Hot Dog,10,3.50,35.00,Food Truck
+1072,2025-07-24,Beverage,Smoothie,7,4.50,31.50,Campus
+1073,2025-07-26,Bakery,Bread,8,2.80,22.40,Downtown
+1074,2025-07-28,Dessert,Ice Cream,7,4.00,28.00,Mall
+1075,2025-07-30,Healthy,Wrap,6,6.00,36.00,Airport
+1076,2025-08-02,Fast Food,Burger,8,5.50,44.00,Mall
+1077,2025-08-04,Beverage,Coffee,10,3.00,30.00,Campus
+1078,2025-08-06,Bakery,Croissant,9,2.20,19.80,Downtown
+1079,2025-08-08,Dessert,Donut,16,1.80,28.80,Food Truck
+1080,2025-08-10,Healthy,Salad,6,6.50,39.00,Airport
+1081,2025-08-12,Fast Food,Pizza,6,8.00,48.00,Mall
+1082,2025-08-14,Beverage,Tea,9,2.50,22.50,Campus
+1083,2025-08-16,Bakery,Muffin,10,2.00,20.00,Food Truck
+1084,2025-08-18,Dessert,Cake,5,12.00,60.00,Downtown
+1085,2025-08-20,Healthy,Fruit Bowl,7,5.00,35.00,Airport
+1086,2025-08-22,Fast Food,Hot Dog,11,3.50,38.50,Mall
+1087,2025-08-24,Beverage,Smoothie,8,4.50,36.00,Campus
+1088,2025-08-26,Bakery,Bread,9,2.80,25.20,Downtown
+1089,2025-08-28,Dessert,Ice Cream,8,4.00,32.00,Food Truck
+1090,2025-08-30,Healthy,Wrap,7,6.00,42.00,Airport
+1091,2025-09-02,Fast Food,Burger,9,5.50,49.50,Mall
+1092,2025-09-04,Beverage,Coffee,11,3.00,33.00,Campus
+1093,2025-09-06,Bakery,Croissant,10,2.20,22.00,Downtown
+1094,2025-09-08,Dessert,Donut,18,1.80,32.40,Food Truck
+1095,2025-09-10,Healthy,Salad,7,6.50,45.50,Airport
