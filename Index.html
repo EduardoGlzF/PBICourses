@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Configuration of Centralized Design Area</title>
+
+<style>
+:root {
+    --blue: #0a5ea8;
+    --border: #dcdcdc;
+    --text: #333;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    color: var(--text);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Collapsible container */
+.collapsible {
+    border: 1px solid var(--border);
+    margin-bottom: 12px;
+}
+
+.collapsible-header {
+    background: var(--blue);
+    color: #fff;
+    padding: 12px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.toggle-icon {
+    margin-right: 10px;
+    font-size: 18px;
+    width: 18px;
+    text-align: center;
+}
+
+.collapsible-content {
+    display: none;
+    padding: 15px;
+    background: #fff;
+}
+
+/* Layout inside General */
+.form-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 12px 15px;
+}
+
+label {
+    font-size: 14px;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}
+
+input, select {
+    padding: 6px;
+    border: 1px solid var(--border);
+}
+
+.static-text {
+    padding-top: 6px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Configuration of Centralized Design Area</h1>
+
+<div class="actions">
+    <button class="btn">SAVE</button>
+    <button class="btn">CANCEL</button>
+</div>
+
+<!-- GENERAL -->
+<div class="collapsible">
+    <div class="collapsible-header" onclick="toggleSection(this)">
+        <span class="toggle-icon">+</span>
+        General
+    </div>
+    <div class="collapsible-content">
+        <div class="form-grid">
+            <label>Sold-to customer number</label>
+            <div class="static-text">Demo</div>
+
+            <label class="required">Description</label>
+            <input type="text">
+
+            <label class="required">Country</label>
+            <select>
+                <option value="">Please select</option>
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="GB">United Kingdom</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="IN">India</option>
+            </select>
+
+            <label class="required">State/Region</label>
+            <select>
+                
+                <option value="">Please select</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+            </select>
+
+            <label>City</label>
+            <input type="text">
+
+            <label class="required">Project ID</label>
+            <input type="text">
+
+           <label class="required">Environment Type</label>
+                <select id="environmentType">
+                    <option value="">Please select</option>
+                    <option value="Outdoor">Outdoor</option>
+                    <option value="Indoor">Indoor</option>
+                  <!-- <option value="Apical">Apical</option>*/ -->
+                </select>
+
+            <label class="required">Installation Type</label>
+                <select id="installationType">
+                    <option value="">Please select</option>
+                </select>
+
+            <label class="required">Length Unit of Measure</label>
+            <div class="static-text">Feet</div>
+
+            <label>Is this a Contract Customer?</label>
+            <div class="static-text">No</div>
+        </div>
+    </div>
+</div>
+
+<!-- DESIGN AREA -->
+<div class="collapsible">
+    <div class="collapsible-header" onclick="toggleSection(this)">
+        <span class="toggle-icon">+</span>
+        Design Area
+    </div>
+    <div class="collapsible-content">
+        Design Area content goes here...
+    </div>
+</div>
+
+<!-- COMPONENT SUMMARY -->
+<div class="collapsible">
+    <div class="collapsible-header" onclick="toggleSection(this)">
+        <span class="toggle-icon">+</span>
+        Component Summary
+    </div>
+    <div class="collapsible-content">
+        Component Summary content goes here...
+    </div>
+</div>
+
+<!-- MESSAGES -->
+<div class="collapsible">
+    <div class="collapsible-header" onclick="toggleSection(this)">
+        <span class="toggle-icon">+</span>
+        Messages
+    </div>
+    <div class="collapsible-content">
+        Messages content goes here...
+    </div>
+</div>
+
+<script>
+function toggleSection(header) {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector(".toggle-icon");
+
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.textContent = "+";
+    } else {
+        content.style.display = "block";
+        icon.textContent = "−";
+    }
+}
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const installationOptions = {
+    Outdoor: [
+      "Aerial",
+      "Below Grade - Duct",
+      "Aerial - Duct",
+      "Self - Supporting"
+    ],
+    Indoor: [
+      "Duct",
+      "Tray"
+    ],
+    Apical: [
+      "Aerial",
+      "Aerial - Duct"
+    ]
+  };
+
+  const environmentSelect = document.getElementById("environmentType");
+  const installationSelect = document.getElementById("installationType");
+
+  environmentSelect.addEventListener("change", function () {
+
+    // Reset installation dropdown
+    installationSelect.innerHTML = '<option value="">Please select</option>';
+
+    const selectedEnvironment = this.value;
+
+    if (installationOptions[selectedEnvironment]) {
+      installationOptions[selectedEnvironment].forEach(function (type) {
+        const option = document.createElement("option");
+        option.value = type;
+        option.textContent = type;
+        installationSelect.appendChild(option);
+      });
+    }
+  });
+
+});
+</script>
+
+
+</body>
+</html>
