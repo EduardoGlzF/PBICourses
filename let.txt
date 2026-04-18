@@ -1,0 +1,20 @@
+let
+    Source = Folder.Files("C:\Users\gonzalezje\Downloads\DatosC5CDMX"),
+    #"Filtered Rows1" = Table.SelectRows(Source, each Text.StartsWith([Name], "inViales")),
+    #"Filtered Hidden Files1" = Table.SelectRows(#"Filtered Rows1", each [Attributes]?[Hidden]? <> true),
+    #"Invoke Custom Function2" = Table.AddColumn(#"Filtered Hidden Files1", "Transform File (2)", each #"Transform File (2)"([Content])),
+    #"Filtered Rows" = Table.SelectRows(#"Invoke Custom Function2", each ([Extension] = ".csv")),
+    #"Removed Other Columns1" = Table.SelectColumns(#"Filtered Rows", {"Transform File (2)"}),
+    #"Expanded Table Column1" = Table.ExpandTableColumn(#"Removed Other Columns1", "Transform File (2)", Table.ColumnNames(#"Transform File (2)"(#"Sample File (2)"))),
+    #"Changed Type" = Table.TransformColumnTypes(#"Expanded Table Column1",{{"latitud", type number}, {"longitud", type number}, {"colonia_catalogo", type text}, {"alcaldia_catalogo", type text}, {"alcaldia_cierre", type text}, {"tipo_entrada", type text}, {"clas_con_f_alarma", type text}, {"codigo_cierre", type text}, {"alcaldia_inicio", type text}, {"incidente_c4", type text}, {"tipo_incidente_c4", type text}, {"dia_semana", type text}, {"folio", type text}, {"fecha_creacion", type date}, {"fecha_cierre", type date}, {"hora_creacion", type time}, {"hora_cierre", type time}}),
+    #"Replaced Errors" = Table.ReplaceErrorValues(#"Changed Type", {{"hora_creacion",#time(23, 59, 59)}}),
+    #"Replaced Errors1" = Table.ReplaceErrorValues(#"Replaced Errors", {{"hora_cierre", #time(23, 59, 59)}}),
+    #"Inserted Merged Column" = Table.AddColumn(#"Replaced Errors1", "FechaHora_creacion", each Text.Combine({Text.From([fecha_creacion], "en-US"), Text.From([hora_creacion], "en-US")}, " "), type text),
+    #"Inserted Merged Column1" = Table.AddColumn(#"Inserted Merged Column", "FechaHora_cierre", each Text.Combine({Text.From([fecha_cierre], "en-US"), Text.From([hora_cierre], "en-US")}, " "), type text),
+    #"Changed Type1" = Table.TransformColumnTypes(#"Inserted Merged Column1",{{"FechaHora_creacion", type datetime}, {"FechaHora_cierre", type datetime}}),
+    #"Inserted Time Subtraction" = Table.AddColumn(#"Changed Type1", "DuracionIncidente", each [FechaHora_cierre] - [FechaHora_creacion], type duration),
+    #"Added Conditional Column" = Table.AddColumn(#"Inserted Time Subtraction", "TipoIncidente", each if [codigo_cierre] = "A" then "Afirmativo" else if [codigo_cierre] = "D" then "Duplicado" else if [codigo_cierre] = "I" then "Informativo" else if [codigo_cierre] = "F" then "Falso" else if [codigo_cierre] = "N" then "Negativo" else null),
+    #"Merged Queries" = Table.NestedJoin(#"Added Conditional Column", {"codigo_cierre"}, Table, {"Codigo"}, "Table", JoinKind.LeftOuter),
+    #"Expanded Table1" = Table.ExpandTableColumn(#"Merged Queries", "Table", {"Texto"}, {"Table.Texto"})
+in
+    #"Expanded Table1"
